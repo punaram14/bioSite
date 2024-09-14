@@ -1,46 +1,153 @@
-/* Global Styles */
+/* General styles for all pages */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background-color: #3498db;
+    background-color: #333;
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 10px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
 nav {
-    background-color: #333;
-    overflow: hidden;
-    text-align: center;
+    display: flex;
+    gap: 80px;
 }
 
 nav a {
-    display: inline-block;
     color: white;
-    padding: 14px 20px;
     text-decoration: none;
+    font-size: 1.2em;
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
+    text-decoration: underline;
 }
 
-main {
+.container {
+    max-width: 1200px;
+    margin: 0 150px;
     padding: 20px;
+    flex-grow: 1; /* Allow content to grow */
+    min-height: 70vh; /* Minimum height to ensure footer stays at the bottom */
+}
+
+.image-circle {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 2px solid #333;
+}
+
+.bio-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bio-content img {
+    width: 45%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+.bio-content .bio-text {
+    width: 50%;
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.home-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.home-gallery .home-item {
+    text-align: justify;
+    width: 30%;
+}
+
+.home-gallery .home-item img {
+    width: 100%;
+    height: 250px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+.home-gallery .home-item p {
+    margin-top: 5px;
+}
+
+.hobbies-content {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.hobbies-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.hobbies-gallery .hobby-item {
+    text-align: justify;
+    width: 30%;
+}
+
+.hobbies-gallery .hobby-item img {
+    width: 100%;
+    /* height: 150px; */
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+.hobbies-gallery .hobby-item p {
+    margin-top: 5px;
 }
 
 footer {
-    background-color: #3498db;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 10px 0;
+    margin-top: 20px; /* Add space above footer */
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Home page specific styles */
+.home-content {
+    text-align: center;
+}
+
+.home-content img {
+    display: block;
+    width: 400px;
+    height: 400px;
+    margin: 30px auto;
+}
+
+.home-gallery img {
+    margin-bottom: 10px;
 }
